@@ -1,6 +1,6 @@
-secret_key_base: 0I4yW5E6EwmD8Xk4nw2lGb3fJgWMYq0cZeCkD2ZigxU
+secret_key_base: CT3LWjCH2-sUTP8GQPN4Eb9wXVMjyU_eEd9vg4CdKAo
 port: 3000
-name: amby
+name: diggamber
 logging:
   severity: debug
   colorize: true
@@ -22,7 +22,7 @@ process_count: 1
 # ssl_key_file:
 # ssl_cert_file:
 redis_url: "redis://localhost:6379"
-database_url: "postgres://rishav:rishav@localhost:5432/amby_dev"
+database_url: postgres://rishav:rishav@localhost:5432/diggamber_dev
 session:
   key: amber.session
   store: signed_cookie

@@ -1,8 +1,6 @@
 require "./initializers/**"
 
 require "amber"
-require "../src/models/**"
-require "../src/pipes/**"
 
 require "../src/controllers/application_controller"
 require "../src/controllers/**"
@@ -30,7 +28,7 @@ Amber::Server.configure do |settings|
   # Name: A name that identifies this application. This is not internally
   # used by the framework.
   #
-  # settings.name = "Amby web application."
+  # settings.name = "Diggamber web application."
   #
   #
   # Colorize Logging: specifies whether or not to use ANSI color codes
@@ -54,7 +52,7 @@ Amber::Server.configure do |settings|
   # initialized to a random key present in `ENV["AMBER_SECRET_KEY"]` or
   # `.amber_secret_key` in this order.
   #
-  # settings.secret_key_base= OlZzJ6NkfldzzujTMpJ3EJphnlht7-sVLgIIzrSKmqs
+  # settings.secret_key_base= gMy3AFoxJPPhvUYSn3KVDSpjwBNg1Rfg5JUX3BOkO90
   #
   #
   # Host: is the application server host address or ip address. Useful for when
@@ -128,7 +126,7 @@ Amber::Server.configure do |settings|
   # Logger: is the logger that Amber and other capable shards in the project will use
   # instead of writing directly to STDOUT. Supply a custom logger to write to syslog, etc.
   #
-  # settings.logger = Amber::Environment::Logger.new(File.open("amby.log", "w"))
+  # settings.logger = Amber::Environment::Logger.new(File.open("diggamber.log", "w"))
   #
   #
 end

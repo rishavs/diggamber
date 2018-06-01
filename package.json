@@ -1,7 +1,7 @@
 {
-  "name": "amby",
+  "name": "diggamber",
   "version": "0.1.0",
-  "description": "Amby with Amber",
+  "description": "Diggamber with Amber",
   "private": true,
   "author": "your-name-here",
   "license": "UNLICENSED",
@@ -23,8 +23,5 @@
     "webpack": "^3.8.1",
     "webpack-merge": "^4.1.1",
     "extract-text-webpack-plugin": "^3.0.2"
-  },
-  "dependencies": {
-    "yarn": "^1.7.0"
   }
 }
