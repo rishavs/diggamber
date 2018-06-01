@@ -1,0 +1,54 @@
+<div class="ui fixed menu">
+    <div class="ui container">
+        <a href="/" class="header item" >
+            Digglu
+        </a>
+        <div class=" menu" style="width: 100%;">
+            <div class="ui item" style="width: 100%;">
+                <div class="ui action input">
+                    <input type="text" placeholder="Search..." />
+
+                    <div class="ui basic button">Search</div>
+                </div>
+            </div>
+        </div>
+
+        <%- if (current_user = context.current_user) %>
+
+        <div class="right menu">
+            <div class="item">
+                <a href="/p/new" class="ui blue button" >New Post</a>
+            </div>
+            <div class="ui simple dropdown item">
+                <i class="bullhorn big icon"></i> <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="#">Message 1</a>
+                    <a class="item" href="#">Message 2</a>
+                    <div class="divider"></div>
+
+                    <a class="item" href="#">Something</a>
+                </div>
+            </div>
+
+            <div class="ui simple dropdown item">
+                <i class="user circle big icon"></i><i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item">HI <%= current_user.email %> </div>
+                    <a class="item" href="/profile">Profile</a>
+                    <a class="item" href="#">Settings</a>
+                    <div class="divider"></div>
+                    <a href="/signout" class="item">Logout</a>
+                </div>
+            </div>
+        </div>
+        
+        <%- else %>
+
+        <div class="item">
+            <a href="/signin" class="ui blue button" >Login</a>
+        </div>
+
+        <%- end %>
+    
+    </div>
+</div>

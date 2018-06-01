@@ -68,7 +68,7 @@ class PostController < ApplicationController
     params.validation do
       required(:title) { |f| !f.nil? }
       required(:content) { |f| !f.nil? }
-      required(:person_id) { |f| !f.nil? }
+      required(:user_id) { |f| !f.nil? }
       required(:link) { |f| !f.nil? }
       required(:likes) { |f| !f.nil? }
       required(:thumb) { |f| !f.nil? }

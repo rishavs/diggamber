@@ -22,8 +22,8 @@
     <%= text_area(name: "content", content: post.content, placeholder: "Content", class: "form-control", size: "30x10") -%>
   </div>
   <div class="form-group">
-    <%= label(:person) -%>
-    <%= select_field(name: "person_id", collection: Person.all.map{|person| [person.id, person.id]}, selected: post.person_id, class: "form-control") -%>
+    <%= label(:user) -%>
+    <%= select_field(name: "user_id", collection: User.all.map{|user| [user.id, user.id]}, selected: post.user_id, class: "form-control") -%>
   </div>
   <div class="form-group">
     <%= text_area(name: "link", content: post.link, placeholder: "Link", class: "form-control", size: "30x10") -%>

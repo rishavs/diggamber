@@ -1,5 +1,6 @@
 amber g auth User
 
-amber g scaffold Persons name:text user:reference thumb:text flair:text
+amber g scaffold Post title:text content:text user:reference link:text likes:int thumb:text
 
-amber g scaffold Posts title:text content:text person:reference link:text likes:int thumb:text
+
+amber g scaffold Persons name:text user:reference thumb:text flair:text

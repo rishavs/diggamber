@@ -18,4 +18,12 @@ class ApplicationController < Amber::Controller::Base
     end
   end
 
+
+  def current_user
+    context.current_user
+  end
+
+  def current_user
+    context.current_user
+  end
 end

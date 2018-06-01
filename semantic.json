@@ -18,6 +18,5 @@
   "permission": false,
   "autoInstall": false,
   "rtl": false,
-  "components": ["reset", "site", "transition", "api", "form", "state", "visibility"],
   "version": "2.3.1"
 }
