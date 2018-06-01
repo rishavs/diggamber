@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-11">
+    <h2>Posts</h2>
+  </div>
+  <div class="col-sm-1">
+    <a class="btn btn-success btn-xs" href="/posts/new">New</a>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Person</th>
+        <th>Link</th>
+        <th>Likes</th>
+        <th>Thumb</th>
+        <th>Actions</th>
+      </tr>
+    <tbody>
+    <%- posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        <td><%= post.person.id %></td>
+        <td><%= post.link %></td>
+        <td><%= post.likes %></td>
+        <td><%= post.thumb %></td>
+        <td>
+          <span>
+            <%= link_to("read", "/posts/#{post.id}", class: "btn btn-success btn-xs") -%>
+            <%= link_to("edit", "/posts/#{post.id}/edit", class: "btn btn-success btn-xs") -%>
+            <%= link_to("delete", "/posts/#{post.id}?_csrf=#{csrf_token}", "data-method": "delete", "data-confirm": "Are you sure?", class: "btn btn-danger btn-xs") -%>
+          </span>
+        </td>
+      </tr>
+    <%- end %>
+    </tbody>
+  </table>
+</div>

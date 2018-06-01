@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-11">
+    <h2>People</h2>
+  </div>
+  <div class="col-sm-1">
+    <a class="btn btn-success btn-xs" href="/people/new">New</a>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Thumb</th>
+        <th>Flair</th>
+        <th>Actions</th>
+      </tr>
+    <tbody>
+    <%- people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.thumb %></td>
+        <td><%= person.flair %></td>
+        <td>
+          <span>
+            <%= link_to("read", "/people/#{person.id}", class: "btn btn-success btn-xs") -%>
+            <%= link_to("edit", "/people/#{person.id}/edit", class: "btn btn-success btn-xs") -%>
+            <%= link_to("delete", "/people/#{person.id}?_csrf=#{csrf_token}", "data-method": "delete", "data-confirm": "Are you sure?", class: "btn btn-danger btn-xs") -%>
+          </span>
+        </td>
+      </tr>
+    <%- end %>
+    </tbody>
+  </table>
+</div>

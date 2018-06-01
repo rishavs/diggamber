@@ -1,0 +1,10 @@
+<h1>Show Person</h1>
+
+<p><%= person.name %></p>
+<p><%= person.thumb %></p>
+<p><%= person.flair %></p>
+<p>
+  <%= link_to("back", "/peoples", class: "btn btn-success btn-xs") -%>
+  <%= link_to("edit", "/people/#{person.id}/edit", class: "btn btn-success btn-xs") -%>
+  <%= link_to("delete", "/people/#{person.id}?_csrf=#{csrf_token}", "data-method": "delete", "data-confirm": "Are you sure?", class: "btn btn-danger btn-xs") -%>
+</p>

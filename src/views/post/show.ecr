@@ -1,0 +1,13 @@
+<h1>Show Post</h1>
+
+<p><%= post.title %></p>
+<p><%= post.content %></p>
+<p><%= post.person.id %></p>
+<p><%= post.link %></p>
+<p><%= post.likes %></p>
+<p><%= post.thumb %></p>
+<p>
+  <%= link_to("back", "/postss", class: "btn btn-success btn-xs") -%>
+  <%= link_to("edit", "/posts/#{post.id}/edit", class: "btn btn-success btn-xs") -%>
+  <%= link_to("delete", "/posts/#{post.id}?_csrf=#{csrf_token}", "data-method": "delete", "data-confirm": "Are you sure?", class: "btn btn-danger btn-xs") -%>
+</p>
